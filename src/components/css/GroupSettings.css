@@ -1,0 +1,109 @@
+/* GroupSettings.css */
+.group-settings {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+  }
+  
+  h2 {
+    font-size: 16px;
+    margin: 5;
+    padding: 10px;
+  }
+  
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+    margin-left: 10px;
+  }
+  
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 20px;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: '';
+    height: 16px;
+    width: 16px;
+    left: 2px;
+    bottom: 2px;
+    background-color: #fff;
+    transition: 0.4s;
+    border-radius: 50%;
+  }
+  
+  .switch input:checked + .slider {
+    background-color: #0a8c75;
+  }
+  
+  .switch input:checked + .slider:before {
+    transform: translateX(20px);
+  }
+  
+  /* Add styles for the GroupSettings popup */
+.group-settings-popup {
+  /* ... Existing styles ... */
+  right: -100%; /* Initially position it outside the viewport on the right */
+  transition: right 0.3s ease-in-out; /* Add a transition for smooth sliding */
+}
+
+
+
+/* Add the slide-in animation */
+@keyframes slideIn {
+  from {
+    right: -100%; /* Start from outside the viewport on the right */
+  }
+  to {
+    right: 0; /* Slide in to the viewport */
+  }
+}
+
+/* Apply the slide-in animation to the group-settings-popup */
+.group-settings-popup.slide-in {
+  animation: slideIn 0.3s ease-in-out; /* Use the slideIn animation */
+  right: 0; /* Ensure it's positioned at 0 after animation */
+}
+
+/* GroupSettings.css */
+.group-settings-popup {
+  position: fixed;
+  top: 0;
+  right: -200px; /* Initially, hide the popup to the right */
+  width: 200px;
+  height: 100%;
+  background-color: #fff;
+  box-shadow: -2px 0 4px rgba(0, 0, 0, 0.1);
+  transition: right 0.3s ease-in-out;
+  z-index: 9999;
+}
+
+.group-settings-content {
+  padding: 10px;
+}
+
+.close-button {
+  background: none;
+  border: none;
+  color: #007bff;
+  cursor: pointer;
+}
+
+/* Add other styling for the GroupSettings content as needed */

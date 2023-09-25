@@ -1,0 +1,437 @@
+/* ChatConversation.css */
+.chat-conversation {
+    display: flex;
+    flex-direction: column;
+    height: 90vh !important;
+    padding: 5px;
+    background-color: #fff;
+    position: relative;
+    padding-bottom: 60px;
+    margin-left: 250px;
+  }
+  
+  .chat-messages {
+    flex: 1;
+    overflow-y: scroll;
+    padding: 10px;
+  }
+  
+  .message {
+    max-width: 70%;
+    margin: 5px;
+    padding: 10px;
+    border-radius: 8px;
+    word-wrap: break-word; /* Ensure long messages wrap properly */
+  }
+  
+  .users {
+    align-self: flex-end;
+    background-color: white;
+    background-color: rgba(209, 226, 159, 0.6); /* Light green background for user messages */
+    color: #000; /* Message text color */
+  }
+  
+  .friend {
+    align-self: flex-start;
+    background-color: rgba(209, 226, 159, 0.6); /* White background for friend messages */
+    color: #000; /* Message text color */
+  }
+  
+  .message-input {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #fff;
+    border-top: 1px solid #ddd;
+    border-radius: 25px;
+    position: relative;
+    bottom: 0;
+    width: 60vh;
+  }
+  
+  .message-input input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 25px; /* Rounded input field */
+    margin-right: 10px;
+  }
+  
+  .message-input img {
+    padding: 10px 10px; /* WhatsApp green for the send button */
+    color: #fff;
+    border: none;
+    border-radius: 50%; /* Rounded send button */
+    cursor: pointer;
+    background-color: #fff;
+  }
+  
+  /* ChatConversation.css */
+/* ... (previous styles) */
+
+.message-input input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 25px; /* Rounded input field */
+    margin-right: 10px;
+    transition: width 0.2s ease-in-out; /* Add a smooth transition effect */
+  }
+  
+  .message-input input[type="text"]:focus {
+    width: 100%; /* Expand the input field to full width on focus */
+  }
+  
+  .message-input button {
+    padding: 8px 15px;
+    background-color: #3E9DD5; /* WhatsApp green for the send button */
+    color: #fff;
+    border: none;
+    border-radius: 50%; /* Rounded send button */
+    cursor: pointer;
+    display: none; /* Hide the button by default */
+  }
+  
+  /* .message-input::before {
+    content: '+';
+    font-size: 36px;
+    margin-right: 10px; 
+    color: #3E9DD5; 
+  } */
+  
+  
+  .icon {
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+    cursor: pointer;
+  }
+  
+  /* ChatConversation.css */
+
+/* ... (previous styles) */
+
+.message-input {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: #fff;
+  border-top: 1px solid #ddd;
+}
+
+.message-input input[type="text"] {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  outline: none;
+  border-radius: 25px; /* Rounded input field */
+  margin-right: 10px;
+}
+
+.icon {
+  width: 30px;
+  height: 30px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+/* Plus icon style */
+.plus-icon {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+/* ... (remaining styles) */
+
+
+  /* Show the send button when text is typed */
+  .message-input input[type="text"]:not(:placeholder-shown) + button {
+    display: block;
+  }
+  
+.message-input .plus-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: transparent;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 2;
+  }
+  
+  /* Popup styles */
+  .popup {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    /* display: none; */
+    flex-direction: column;
+    z-index: 2;
+  }
+  
+  /* Popup icon styles */
+  .popup-icon {
+    padding: 10px;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+  }
+  
+  /* Show the popup when the plus icon is clicked */
+  .plus-icon.active + #popup {
+    display: flex;
+  }
+  
+  /* ChatConversation.css */
+.chat-conversation {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 10px;
+  background-color: #f5f5f5;
+}
+
+.chat-messages {
+  flex: 1;
+  overflow-y: scroll;
+  padding: 10px;
+}
+
+.message {
+  max-width: 70%;
+  margin: 5px;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.sender {
+  align-self: flex-end;
+  background-color: #DCF8C6; /* Sender message background color */
+  color: black;
+}
+
+.receiver {
+  align-self: flex-start;
+  background-color: #fff; /* Receiver message background color */
+  color: #333;
+}
+
+.message-input {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: #fff;
+  border-top: 1px solid #ddd;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 20px; /* Rounded input box */
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+/* ChatConversation.css */
+
+/* ... (existing styles) ... */
+
+/* Popup styles */
+.popup {
+  bottom: 80px;
+  right: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  /* display: none;  */
+  flex-direction: row; /* Change to row layout */
+  flex-wrap: wrap; /* Wrap content to the next row */
+  z-index: 2;
+}
+
+/* Popup icon styles */
+.popup-icon {
+  padding: 10px;
+  cursor: pointer;
+  width: calc(33.33% - 20px); /* Adjust the width for a 2x3 grid */
+  text-align: center;
+}
+
+/* ... (existing styles) ... */
+/* ChatConversation.css */
+.chat-conversation {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: #f5f5f5;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+.chat-messages {
+  flex: 1;
+  overflow-y: scroll;
+  padding: 10px;
+}
+
+.message {
+  max-width: 70%;
+  margin: 5px;
+  padding: 10px;
+  border-radius: 8px;
+  word-wrap: break-word; /* Ensure long messages wrap properly */
+}
+
+.sender {
+  align-self: flex-end;
+  background-color: #DCF8C6; /* Sender message background color */
+  color: black;
+}
+
+.receiver {
+  align-self: flex-start;
+  background-color: #fff; /* Receiver message background color */
+  color: #333;
+}
+
+
+.message-input input[type="text"] {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  outline: none;
+  border-radius: 25px; /* Rounded input field */
+  margin-right: 10px;
+}
+
+.message-input .plus-icon {
+  padding: 8px 8px; /* WhatsApp green for the plus icon */
+  color: #fff;
+  border: none;
+  border-radius: 50%; /* Rounded plus icon */
+  cursor: pointer;
+}
+
+.message-input img.icon {
+  padding: 8px 8px; /* WhatsApp green for the send button */
+  color: #fff;
+  border: none;
+  border-radius: 50%; /* Rounded send button */
+  cursor: pointer;
+  display: none; /* Hide the button by default */
+}
+
+/* Show the send button when text is typed */
+.message-input input[type="text"]:not(:placeholder-shown) + img.icon {
+  display: block;
+}
+
+/* Plus icon styles */
+.plus-icon {
+  font-size: 20px; /* Adjust the plus sign size as needed */
+}
+
+/* ChatConversation.css */
+
+/* ... (previous styles) */
+
+.message-input {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: #fff;
+  border-top: 1px solid #ddd;
+  position: relative; /* Add this to create a positioning context for the plus icon */
+}
+
+.message-input input[type="text"] {
+  flex: 1;
+  padding: 10px;
+  border: 10px;
+  outline: none;
+  border-radius: 25px; /* Rounded input field */
+  margin-right: 10px;
+}
+
+.icon {
+  width: 30px;
+  height: 30px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+/* Plus icon style */
+.plus-icon {
+  z-index: 0 !important;
+  position: static !important;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  left: 67% !important; /* Position it vertically in the middle */
+  bottom: 8% !important; /* Adjust the right spacing as needed */
+  top: 95%;
+  transform: translateY(-50%); /* Center it vertically */
+}
+
+/* ... (remaining styles) */
+
+.popup {
+  width: 300px;
+  left: 50%; /* Position it vertically in the middle */
+  bottom: 80px;
+  right: 10px;
+  background-color: #fff 50%;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  display: none; /* Initially hidden */
+  flex-direction: column;
+}
+
+/* Popup icon styles */
+.popup-content {
+  width: 100px;
+  height: 180px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 5px 10px;
+}
+
+.popup-icon {
+  z-index: 2;
+  padding: 15px;
+  cursor: pointer;
+  text-align: center;/* Add a border to icons for separation */
+}
+
+/* Show the popup when the plus icon is clicked */
+.plus-icon.active + .popup {
+  display: flex;
+}
+
+.popup-icon {
+  padding: 5px; /* Reduced padding */
+  cursor: pointer;
+  text-align: center;
+}
+
+.popup-icon img {
+  max-width: 30px; /* Set a maximum width for the icons */
+  max-height: 30px; /* Set a maximum height for the icons */
+}

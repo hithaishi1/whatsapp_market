@@ -1,0 +1,12 @@
+/* Marketplace.css */
+.marketplace {
+    padding: 20px;
+  }
+  
+  h2 {
+    font-size: 18px;
+    margin: 0;
+  }
+  
+  /* You can further style the ItemList component within Marketplace.css */
+  

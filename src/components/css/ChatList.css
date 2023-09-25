@@ -1,0 +1,126 @@
+/* ChatList.css */
+
+/* ChatList.css (Updated) */
+/* ... Other styles ... */
+
+.user {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ccc; /* Add a thin line between users */
+    border-left: 2px solid transparent; /* Add a left border */
+    text-decoration: none; /* Remove underlines from links */
+    color: inherit; /* Use the parent's text color */
+  }
+  
+  .user-info {
+    flex: 1; /* Allow user-info to expand and take remaining space */
+  }
+  
+  /* ... Other styles ... */
+  .chat-list {
+    background-color: white !important; /* Set the background color to white */
+    padding: 10px; /* Add padding as needed */
+    border: 1px solid #ccc; /* Add a border if desired */
+    overflow-y: scroll;
+    text-decoration: none; /* Add vertical scrolling if the chat list overflows */
+  }
+
+  /* ChatList.css */
+/* Add styles for user container */
+.user {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ccc; /* Add a thin line between users */
+    text-decoration: none; /* Remove underlines from links */
+    color: inherit; /* Use the parent's text color */
+  }
+  
+  /* Style the user's avatar image */
+  .avatar {
+    width: 50px; /* Adjust the avatar size as needed */
+    height: 50px;
+    border-radius: 50%; /* Make the avatar round */
+    margin-right: 10px; /* Add some spacing to the right */
+  }
+  
+  /* Style the user's information (name) */
+  .user-info {
+    flex-grow: 1;
+    text-decoration: none; /* Allow the name to take up the remaining space */
+  }
+  
+  .user-name {
+    font-size: 16px; /* Adjust the font size as needed */
+    font-weight: bold; /* Make the name bold */
+    margin: 0;
+    text-decoration: none; /* Remove default margin */
+  }
+  
+
+  
+  .chat {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  .chat:hover {
+    background-color: #e5e5e5;
+  }
+  
+  .chat img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+  }
+  
+  .chat-info {
+    flex: 1;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    text-decoration: none;
+  }
+  
+  .chat-name {
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+  
+  .chat-last-message {
+    font-size: 14px;
+    color: #888;
+  }
+  
+  .unread-badge {
+    background-color: #128c7e;
+    color: #fff;
+    font-size: 12px;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+  }
+
+  /* ChatList.css */
+.avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px; /* Adjust the margin as needed */
+  }
+  
+  
+  /* Customize styles as needed */
+  
